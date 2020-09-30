@@ -1,0 +1,13 @@
+<h1>{{ titulo }}</h1>
+<h5>{{ subtitulo }}</h5>
+<p>Estado: {{ estado }}</p>
+<p>{{ persona | json }}</p>
+<h2>El Numero es: {{ numero }}</h2>
+
+<hr />
+<button (click)="cambiarTitulo()">cambiar Titulo</button>
+
+<button (click)="incrementarNumero()">+</button>
+<button (click)="reducirNumero()">-</button>
+
+<router-outlet></router-outlet>
