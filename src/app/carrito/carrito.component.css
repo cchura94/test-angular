@@ -1,0 +1,22 @@
+.caja {
+  width: 50%;
+
+  background-color: #c386cc;
+  float: left;
+}
+
+.carrito {
+  width: 50%;
+
+  background-color: #04bd8f;
+  float: left;
+}
+
+.item {
+  width: 200px;
+  background-color: chocolate;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+  float: left;
+}

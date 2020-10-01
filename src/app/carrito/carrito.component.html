@@ -1,0 +1,39 @@
+<h1>Carrito</h1>
+
+<div class="caja">
+  <h2>SELECCIONAR LA CATEGORIA:</h2>
+  <ul>
+    <li *ngFor="let cat of categorias">
+      <input type="radio" name="cate" /> {{ cat }}
+    </li>
+  </ul>
+
+  <h2>LISTA DE PRODUCTOS</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>NOMBRE</th>
+        <th>PRECIO</th>
+        <th>CANTIDAD</th>
+        <th>DETALLE</th>
+        <th>ACCIONES</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of productos">
+        <td>{{ prod.nombre }}</td>
+        <td>{{ prod.precio }}</td>
+        <td>{{ prod.cantidad }}</td>
+        <td>{{ prod.detalle }}</td>
+        <td><button (click)="addCarrito(prod)">+</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="carrito">
+  <h2>LISTA DE PEDIDOS</h2>
+  <div class="item" *ngFor="let c of carrito">
+    <h4>{{ c.nombre }}</h4>
+    <h3>Precio: {{ c.precio }}</h3>
+  </div>
+</div>
